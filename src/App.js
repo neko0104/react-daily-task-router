@@ -3,12 +3,30 @@ import {
   HashRouter,
   NavLink,
   Outlet,
-  Route,Routes,
+  Route,
+  Routes,
+  useNavigate,
 } from 'react-router-dom';
 
+const Learning = ()=>{
+  return <>
+  <p>
+        <a href="https://hackmd.io/VqEGaLa7TAW41hKsWZp4kA">Day13 React Router link</a><br/>
+        <a href='https://hackmd.io/2PcaYppLQlCmx7eldhTJ1w'>Day14 React Router link</a>
+  </p>
+  </>
+}
+
 const Todo = () => {
-  return <p>這是 Todo 頁面 
-  </p>;
+const navigate = useNavigate()
+const Logout =()=>{
+  return <button type="button" onClick={()=>navigate("/login")}>登出</button>
+}
+
+  return <>
+  <p>這是 Todo 頁面 </p>
+  <Logout/>
+  </>;
 };
 const Login = () => {
   return <p>這是登入頁面</p>;
@@ -25,7 +43,7 @@ function App() {
   return (
     <div className="container">
       <HashRouter>
-        <div className="nav-link">
+      <div className="nav-link">
           <NavLink to="/">
             <p>回到首頁</p>
           </NavLink>
@@ -38,14 +56,17 @@ function App() {
           <NavLink to="/todo">
             <p>Todo 頁面</p>
           </NavLink>
+          <NavLink to="/learning">
+            <p>每日任務 頁面</p>
+          </NavLink>
         </div>
-        <a href="https://hackmd.io/VqEGaLa7TAW41hKsWZp4kA">範例 link</a>
         {/* Routes, Route 練習區 */}
         <Routes>
           <Route path="/" element={<Outlet/>}>
           <Route path="todo" element={<Todo/>}/>
           <Route path="register" element={<Register/>}/>
           <Route path="login" element={<Login/>}/>
+          <Route path="learning" element={<Learning/>}/>
           </Route>
           <Route path="*" element={<NotFound/>}/>
         </Routes>

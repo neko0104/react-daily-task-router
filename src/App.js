@@ -39,6 +39,7 @@ function App() {
             <p>Todo 頁面</p>
           </NavLink>
         </div>
+        <a href="https://hackmd.io/VqEGaLa7TAW41hKsWZp4kA">範例 link</a>
         {/* Routes, Route 練習區 */}
         <Routes>
           <Route path="/" element={<Outlet/>}>

@@ -9,6 +9,7 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
+import {data} from "./data";
 
 const Index = ()=>{
   return (
@@ -23,7 +24,7 @@ const Index = ()=>{
 const Learning = () => {
   return (
     <>
-      <p>
+      {/* <p>
         <a href="https://hackmd.io/VqEGaLa7TAW41hKsWZp4kA" target="_blank">
           Day13 React Router link
         </a>
@@ -42,7 +43,21 @@ const Learning = () => {
         <a href="https://hackmd.io/hgeS_jgrQDWGdlHNy-216g" target="_blank">
           Day20 React Deploy
         </a>
-      </p>
+      </p> */}
+      <table>
+        <tr>
+          <th>標題</th>
+          <th>講義連結</th>
+          <th>作業連結</th>
+        </tr>
+        {data.map(v=>{
+          return <tr>
+            <td>{v.title}</td>
+            <td><a href={v.hackMD} target="blank">link</a></td>
+            <td><a href={v.Codepen} target={v.Codepen && "blank"}>link</a></td>
+          </tr>
+        })}
+      </table>
     </>
   );
 };

@@ -20,3 +20,11 @@
 .nav-link a:hover, .nav-link a:focus, .nav-link a:active {
   background-color:#4682b4;
 }
+
+tr{
+  outline: 1px solid #bbb;
+}
+
+td{
+  padding: 2px;
+}

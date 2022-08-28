@@ -10,6 +10,16 @@ import {
   useParams,
 } from "react-router-dom";
 
+const Index = ()=>{
+  return (
+  <>
+  {window.location.hash==="#/" && console.log("index")}
+  <h1>歡迎光臨</h1>
+  <Outlet/>
+
+  </>)
+}
+
 const Learning = () => {
   return (
     <>
@@ -26,6 +36,11 @@ const Learning = () => {
         <br />
         <a href="https://hackmd.io/F3UphiNUQx6XP5nXxhCOEQ" target="_blank">
           Day15 React Router link
+        </a>
+        <br />
+        <br />
+        <a href="https://hackmd.io/hgeS_jgrQDWGdlHNy-216g" target="_blank">
+          Day20 React Deploy
         </a>
       </p>
     </>
@@ -102,7 +117,7 @@ function App() {
         </div>
         {/* Routes, Route 練習區 */}
         <Routes>
-          <Route path="/" element={<Outlet />}>
+          <Route path="/" element={<Index/>}>
             <Route path="todo" element={<Todo />} />
             <Route path="register" element={<Register />} />
             <Route path="login" element={<Login />} />

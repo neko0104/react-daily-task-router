@@ -27,6 +27,6 @@ export  const data = [
     {title:"Day 18｜React Hook Form - Submit Form" , hackMD:"https://hackmd.io/PfhXp-a1QxiCgkk6XYoGmg" , Codepen:"https://codepen.io/kunpao0104/pen/NWYZPmy" },
     {title:"Day 19｜axios headers token settings" , hackMD:"https://hackmd.io/neQCMjvQSQC0kG6arpf0Mw" , Codepen:"https://codepen.io/kunpao0104/pen/wvmLqeg" },
     {title:"Day 20｜React Deploy" , hackMD:"https://hackmd.io/hgeS_jgrQDWGdlHNy-216g" , Codepen:"https://codepen.io/kunpao0104/pen/zYWVdmb" },
-    {title:"第四週 Todolist 全攻略" , hackMD:"https://hackmd.io/qAoC1rc2TyqLl_io39Du8Q?view" , Codepen:"" },
+    {title:"第四週 Todolist 全攻略" , hackMD:"https://hackmd.io/qAoC1rc2TyqLl_io39Du8Q?view" , Codepen:"https://github.com/neko0104/hexschool-todo/tree/master" },
 
 ]
